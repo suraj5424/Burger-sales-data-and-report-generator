@@ -61,3 +61,26 @@ Generates two visualizations:
 ### **⚒ Slicers for the Desired Filters**
 
 Example usage demonstrates filtering options for the `sales_report_by_burger_name_visualization` function based on date, time, and burger name.
+
+# Project Name
+
+## Description
+
+This project showcases various examples of using emojis in different contexts within Google Colab.
+
+**Note:** The data presented in this repository, including names, sales figures, ingredients, etc., is completely fictional and is used solely for educational purposes. It has no relation to any real burger company or entity.
+
+## Examples
+
+### Direct Typing
+
+😊 😎 🐍
+
+### Shortcodes
+
+:smile: :sunglasses: :snake:
+
+### Using Unicode in Code
+
+```python
+print("Hello, world! 😊")
