@@ -68,4 +68,4 @@ This project is licensed under the MIT License - see the [LICENSE](./LICENSE.txt
 
 - The code template and dataset structure were inspired by the requirements of Burgerking sales analysis.
 
-**Note:** The data presented in this repository, including names, sales figures, ingredients, etc., is completely fictional and is used solely for educational purposes. It has no relation to any real Burgerking company or entity.
+## **Note:** The data presented in this repository, including names, sales figures, ingredients, etc., is completely fictional and is used solely for educational purposes. It has no relation to any real Burgerking company or entity.
