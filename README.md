@@ -1,86 +1,71 @@
-# 🍔 **Burgerking 💶 Sales 📖 Dataset and 📑 Report 🔀 Generator**
 
-This project generates synthetic sales data for various burgers sold at Burgerking over a year, analyzing sales patterns and ingredient consumption. It includes functionalities to visualize sales reports by burger type, ingredient consumption, and specific time periods.
+# 🍔 Burgerking 💶 Sales 📖 Dataset and 📑 Report 🔀 Generator
 
-## 📚 **Necessary Library Imports**
+## Overview
 
-- **pandas**: For data manipulation and analysis.
-- **random**: To generate random numbers for sales multipliers.
-- **plotly.express**: For creating interactive visualizations.
-- **plotly.graph_objects**: Allows creation of customized plots.
-- **datetime**: Provides classes for manipulating dates and times.
+This repository contains code to simulate and analyze sales data for a variety of burgers offered by Burgerking. It includes functions to generate synthetic sales data over a specified time period, visualize sales reports, and analyze ingredient consumption. Below is an overview of the key functionalities and methods provided in the code.
 
-## 🍔 **Burger Names with their Ingredients**
+## Key Functionalities
 
-Defines various burgers and their ingredients using Python dictionaries.
+### 1. Burger and Ingredient Definitions
 
-## 🍔 **Burger Names with their Prices 💶 per unit**
+The code defines different types of burgers offered by Burgerking along with their respective ingredients and prices. This information is crucial for simulating sales and calculating ingredient consumption.
 
-Lists prices for each burger type.
+### 2. Dataset Generation
 
-## ⏲ **Time Duration to Generate the Dataset**
+The script generates synthetic sales data for each burger type at regular intervals throughout a specified time range (typically one year). Sales are influenced by factors such as time of day, month of the year, and specific characteristics of each burger type (e.g., size, meat type).
 
-Defines start and end dates for generating synthetic sales data over one year, with specific peak hours identified.
+### 3. Total Turnover Report
 
-## 🔀 **Generate the Dataset**
+#### Function: `sales_report_by_burger_visualization`
 
-Utilizes nested loops to generate synthetic sales data for each burger type at 15-minute intervals throughout the defined time range. Sales are influenced by seasonality, time of day, and burger characteristics.
+- Generates a bar chart showing the turnover (total sales revenue) for each burger type over a specified date range and optional time range.
+- Allows filtering by specific months and times of day to analyze sales trends.
 
-## **The Generated Dataset**
+### 4. Ingredients Consumption Report
 
-Exports the generated sales data to a CSV file named `Burger sales data_one_year.csv`.
+#### Function: `sales_report_by_ingredient_visualization`
 
-## **Total 💰 Turnover Report**
+- Produces a bar chart depicting the total consumption of each ingredient across all burger types over a specified date range and optional time range.
+- Useful for inventory management and understanding ingredient usage patterns.
 
-### `sales_report_by_burger_visualization(start_date, end_date, months, start_time=None, end_time=None)`
+### 5. Slicers and Custom Reports
 
-Generates a bar chart visualization depicting the turnover by burger type within specified date and time ranges. Allows filtering by months and optionally by time.
+#### Function: `sales_report_by_burger_name_visualization`
 
-### **🛠 Filters to Adjust Desired Range**
+- Provides customizable reports based on specific burger names, allowing detailed analysis including:
+  - Quantity sold by month and time category (peak hours vs. non-peak hours).
+  - Ingredient consumption breakdown for the selected burger.
+  - Key Performance Indicators (KPIs) such as total revenue, average revenue per burger, peak hour sales, and more.
 
-Example usage demonstrates filtering options for the `sales_report_by_burger_visualization` function based on date and time.
+## Usage
 
-## **🍔 Ingredients Consumption Report**
+### Generating Sales and Reports
 
-### `sales_report_by_ingredient_visualization(start_date, end_date, months, start_time=None, end_time=None)`
+1. **Total Turnover Report Example:**
+   - Adjust date and time filters (`start_date`, `end_date`, `months`, `start_time`, `end_time`) as needed.
+   - Use `sales_report_by_burger_visualization` function to visualize turnover by burger type.
 
-Creates a bar chart showing total ingredient consumption across all burgers within specified date and time ranges. Provides options to filter by months and time.
+2. **Ingredients Consumption Report Example:**
+   - Modify date and time filters (`start_date`, `end_date`, `months`, `start_time`, `end_time`) based on requirements.
+   - Utilize `sales_report_by_ingredient_visualization` function to visualize ingredient consumption trends.
 
-### **🛠 Filters to Adjust Desired Range**
+3. **Custom Reports with Slicers:**
+   - Define specific parameters (`start_date`, `end_date`, `start_time`, `end_time`, `burger_name`) to create detailed reports using `sales_report_by_burger_name_visualization`.
+   - This function provides insights into sales patterns, ingredient usage, and KPIs tailored to a chosen burger type.
 
-Example usage illustrates how to filter the `sales_report_by_ingredient_visualization` function based on date and time.
+## Additional Information
 
-## **⚒ Slicers Including BURGER NAME**
+- The code utilizes Python libraries such as Pandas for data manipulation, Plotly for interactive visualizations, and datetime for handling date-time operations.
+- It includes provisions for adjusting sales multipliers based on seasonal variations, burger characteristics, and peak hours to simulate realistic sales data.
+- Outputs generated include CSV files of sales data and interactive visualizations depicting turnover, ingredient consumption, and customized reports.
 
-### `sales_report_by_burger_name_visualization(start_date, end_date, start_time=None, end_time=None, burger_name=None)`
+## License
 
-Generates two visualizations:
-1. Bar chart showing quantity sold by month and time category (peak hours vs. non-peak hours).
-2. Bar chart illustrating ingredient consumption for a specific burger type. Also calculates key performance indicators (KPIs) such as total revenue, average revenue per burger, and more.
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE.txt) file for details.
 
-### **⚒ Slicers for the Desired Filters**
+## Acknowledgments
 
-Example usage demonstrates filtering options for the `sales_report_by_burger_name_visualization` function based on date, time, and burger name.
+- The code template and dataset structure were inspired by the requirements of Burgerking sales analysis.
 
-# Project Name
-
-## Description
-
-This project showcases various examples of using emojis in different contexts within Google Colab.
-
-**Note:** The data presented in this repository, including names, sales figures, ingredients, etc., is completely fictional and is used solely for educational purposes. It has no relation to any real burger company or entity.
-
-## Examples
-
-### Direct Typing
-
-😊 😎 🐍
-
-### Shortcodes
-
-:smile: :sunglasses: :snake:
-
-### Using Unicode in Code
-
-```python
-print("Hello, world! 😊")
+**Note:** The data presented in this repository, including names, sales figures, ingredients, etc., is completely fictional and is used solely for educational purposes. It has no relation to any real Burgerking company or entity.
